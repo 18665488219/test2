@@ -1,0 +1,395 @@
+html,body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,a{
+	padding: 0px;
+	margin: 0px;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+/*导航 start*/
+.header{
+	width: 100%;
+	height: 92px;
+}
+.header_left{
+	width: 640px;
+	height: 92px;
+
+	background: #F77E8C;
+	float: left;
+}
+.icon{
+	float: right;
+	width: 300px;
+	height: 92px;
+    /*border:1px solid gray;*/
+    box-sizing: border-box;
+}
+.icon img{
+	float: left;
+	width: 78px;
+	height: 79px;
+}
+.icon .icon_right{
+	margin-left: 10px;
+	width: 200px;
+	height: 92px;
+	float: right;
+	box-sizing: border-box;
+}
+.icon .icon_right p{
+	color: #fff;
+	font-size: 30px;
+	padding: 0px;
+	margin: 5px;
+}
+.icon .icon_right .font{
+	font-size: 14px;
+	
+}
+
+.header_right{
+	float: right;
+	width: 620px;
+	height: 92px;
+	line-height: 92px;
+	padding-left: 30px;
+	box-sizing: border-box;
+	
+}
+.header_right .header_right_ui{
+	width: 900px;
+	height: 92px;
+	float: right;
+
+}
+.header_right .header_right_ui .header_right_li{
+	float: left;
+	margin-left: 50px;
+	font-size: 18px;
+	line-height: 92px;
+	text-align: right;
+}
+.header_right_ui .header_right_li a{
+	color: #000;
+}
+.header_right_ui .header_right_li a:hover{
+	color: #F77E8C;
+	font-weight: bold;
+	text-decoration: none;
+}
+.nav-center{
+	width: 100%;
+	float: right;
+	width: 620px;
+	height: 92px;
+	line-height: 92px;
+	margin-left: 30px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*导航 start*/
+
+/*中间内容  banner图 start*/
+.banner{
+	width: 100%;
+	height: 780px;
+}
+.swiper-container{
+	width: 100%;
+	height: 780px;
+}
+.swiper-slide_img{
+	background: url("../img/banner2.png");
+	width: 100%;
+	height:780px;
+}
+.swiper-slide_img_two{
+	background: url("../img/banner3_sjdo.png");
+	width: 100%;
+	height:780px;
+}
+.banner_jx{
+	background: url("../img/tsv7.png");
+	width: 774px;
+	height: 747px;
+	margin: auto;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.banner_kat{
+	width: 360px;
+	position: absolute;
+	margin:0 auto;
+	top: 20%;
+	left: 27%;
+}
+.banner_jx h4{
+	font-size: 36px;
+	font-family: 微软雅黑;
+	margin-bottom: 10px;
+	color: #fff;
+	text-align: center;
+}
+.banner_jx h2{
+	color: #fff;
+	font-family: '华文彩云';
+    font-size: 90px;
+    letter-spacing: 12px;
+    text-align: center;
+}
+.banner_jx h2::after{
+	content: '';
+	width:100%;
+	display: block;
+	border:1px solid #fff;
+}
+.banner_jx h2::before{
+	content: '';
+	width:100%;
+	display: block;
+	border:1px solid #fff;
+}
+.banner_jx p{
+	text-align: left;
+	text-indent: 2em;
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+ .pav{
+ 	width: 177px;
+ 	height: 155px;
+ 	margin: auto;
+ 	position: absolute;
+ 	bottom: 15%;
+ 	left: 40%;
+ }
+ /*banner end*/
+
+
+/*尾部 start*/
+.footer_box{
+	width:100%;
+	height: 230px;
+	background: #F77D8B;
+}
+.footer_solid{
+	width: 100%;
+	height: 1px;
+	margin-top: 30px;
+	border-bottom:1px solid #fff;
+}
+.footer_content{
+	width: 1200px;
+	height: 27px;
+	margin:0 auto;
+}
+.footer_content .footer_ui{
+	width: 850px;
+	height: 27px;
+	margin:0 auto;
+	text-align: center;
+}
+.footer_content .footer_ui .footer_li{
+	float: left;
+	padding-right: 20px;
+	font-size: 20px;
+}
+.footer_content .footer_ui .footer_li:not(:last-child) :after{
+	content: '';
+	text-align: center;
+	border-right: 2px solid #fff;
+	font-size: 16px;
+	margin-left: 30px;
+}
+.footer_content .footer_ui .footer_li a{
+	color: #fff;
+	font-family: '微软雅黑';
+}
+.footer_wzi{
+	width: 603px;
+	height: 42px;
+	margin:20px auto;
+}
+.footer_wzi span{
+	font-size: 14px;
+	color: #fff;
+}
+.footer_wzi span p{
+	text-align: center;
+}
+.footer_icon{
+	width: 600px;
+	height: 36px;
+	margin:0 auto;
+}
+
+.footer_icon_box li{
+	width: 97px;
+	height: 30px;
+	float: left;
+}
+.footer_icon_box li span{
+	width: 150px;
+	/*height: 1px;*/
+	border:1px solid #fff;
+	display: inline-block;
+	/*margin-left: 10px;*/
+	
+}
+
+
+.nav-center{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.nav{
+	background-color:#F77D8B; 
+	width: 1200px;
+	height: 27px;
+
+}
+.navbar{
+	margin-bottom: 0;
+	width: 1200px;
+	height: 27px;
+	margin: auto;
+}
+.nav li a{
+	color: #fff;
+	font-size: 20px;
+}
+.nav li:not(:last-child) :after{
+	content: '';
+	text-align: center;
+	border-right: 2px solid #fff;
+	font-size: 16px;
+	margin-left: 30px;
+}
+.footer_content .footer_ui .footer_li:not(:last-child) :after{
+	content: '';
+	text-align: center;
+	border-right: 2px solid #fff;
+	font-size: 16px;
+	margin-left: 30px;
+}
+.navbar-header .navbar-toggle{
+	float: none;	
+}
+
+.navbar-nav > li > a:hover{
+ 	color: #e67e22;
+ 	border:0;
+}
+
+@media (max-width: 768px){
+	.navbar-nav > li {
+		width: 100%;
+    	float: none;
+	}
+	.nav-center{/*项目的排列方向(每一个li分行显示)*/
+		flex-direction: column;
+	}
+}
+/*尾部 end*/
+
+/*侧边导航 start*/
+.map .map_left{
+	float: left;
+	width: 250px;
+	min-height: 250px;
+	/*border:1px solid gray;*/
+}
+.map .map_left .map_left_ui{
+	width: 250px;
+	text-align: center;
+}
+.map .map_left .map_left_ui .map_left_li{
+	background-color: #F77E8C;
+	width: 240px;
+	height: 52px;
+	line-height: 52px;
+	margin-bottom: 10px;
+
+}
+.map .map_left .map_left_ui .map_left_li a{
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+}
+.map .map_left .map_left_ui .map_left_li:hover{
+	background-color: #C43A4A;
+}
+.map .map_left .map_left_ui li{
+	background-color: #F77E8C;
+	width: 240px;
+	font-size: 16px;
+	height: 82px;
+	line-height: 45px;
+	margin-bottom: 10px;
+	color: #fff;
+}
+.map .map_left .map_left_ui li span,p{
+	margin: 0;
+	padding: 0;
+}
+/*侧边导航 end*/
+
+
+/*中间内容 文字 start*/
+.company_contentes{
+	width: 1200px;
+	/*border:1px solid gray;*/
+	margin:0 auto;
+}
+.company_title{
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	
+}
+.company_title .company_title_left{
+	float: left;
+	width:510px;
+	height: 40px;
+}
+.company_title .company_title_left p{
+	font-size: 32px;
+    color:#F4C4CA;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.company_title .company_title_left p span{
+	/*text-align: center;*/
+	height: 40px;
+	line-height: 40px;
+	color: #E06A78;
+	font-weight: bold;
+	font-size: 24px;
+	z-index: 2;
+}
+.company_title_right{
+	font-size: 16px;
+	line-height: 40px;
+	float: right;
+}
+.company_dotted{
+	width: 100%;
+	border-bottom: 1px dotted gray;
+}
+.map{
+	width: 100%;
+	min-height:650px;
+	margin-top: 20px;
+}
+/*中间内容 文字 end*/

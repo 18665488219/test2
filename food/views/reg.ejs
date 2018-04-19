@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<!-- bootstrap.css插件 -->
+<!-- element.css插件 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link rel="stylesheet" type="text/css" href="./css/login.css">
+</head>
+<body>
+<div id="app">
+<div class="login_box">
+		<h2>猫大人甜点屋后台注册</h2>
+		<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm" method="post" action="/reg/reg">
+		  	<el-form-item label="用户名" prop="name">
+		    	<el-input v-model="ruleForm.name" name="username"></el-input>
+		  	</el-form-item>
+	    	<el-form-item label="密码" prop="pass">
+		    <el-input type="password" v-model="ruleForm.pass" auto-complete="off" name="pass"></el-input>
+		  </el-form-item>
+		  <el-form-item label="确认密码" prop="checkPass">
+		    <el-input type="password" v-model="ruleForm.checkPass" auto-complete="off" name="checkPass"></el-input>
+		  </el-form-item>
+		  <el-form-item label="性别" prop="sex">
+		    <el-radio-group v-model="ruleForm.resource" name="sex">
+		      <el-radio label="男"></el-radio>
+		      <el-radio label="女"></el-radio>
+		    </el-radio-group>
+		  </el-form-item>
+<!-- 		  <el-form-item label="头像" prop="img">
+		  <input type="file" id="file" name="img">
+			</el-form-item> -->
+		  <el-form-item label="说明" prop="desc">
+		    <el-input type="textarea" v-model="ruleForm.desc" name="instructions"></el-input>
+		  </el-form-item>
+		  <el-form-item>
+		    <el-button type="primary" @click="submitForm('ruleForm')">注册</el-button>
+		    <el-button @click="resetForm('ruleForm')">重置</el-button>
+		  </el-form-item>
+		</el-form>
+
+</div>
+<div class="bg">
+	<ul>
+		<li><img src="./img/login/0.jpg"></li>
+		<!-- <li><img src="./img/login/1.jpg"></li> -->
+		<!-- <li><img src="./img/login/2.jpg"></li> -->
+	</ul>
+</div>
+</div>
+<!-- vue.js 插件 -->			
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- bootstrap.js 插件 -->
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<!-- element-ui.js 插件 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+	 new Vue({
+      el: '#app',
+      data: function() {
+        return {
+        ruleForm: {
+          name: '',
+          pass:'',
+          checkPass:'',
+          // sex: '',
+          // img:'',
+          desc: ''
+        },
+        rules: {
+          name: [
+            { required: true, message: '请输入用户名', trigger: 'blur' },
+            { min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur' }
+          ],
+          pass: [
+            { required: true, message: '请输入密码', trigger: 'blur' },
+            { min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur' }
+          ],
+          checkPass: [
+            { required: true, message: '请确认密码', trigger: 'blur' },
+            { min: 3, max: 20, message: '两次密码输入不一致', trigger: 'blur' }
+          ],
+          desc: [
+            { required: true, message: '请填写说明', trigger: 'blur' }
+          ]
+        }
+      };
+    },
+    methods: {
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+           $("form").submit();
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      },
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
+      }
+    }
+ 
+    })
+</script>
+</body>
+</html>

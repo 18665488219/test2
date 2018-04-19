@@ -1,0 +1,18 @@
+.msg_box{
+	width: 524px;
+	height: 516px;
+	float: left;
+	/*border:1px solid gray;*/
+}
+.el-form{
+	float: left;
+	width: 524px !important;
+	height: 516px;
+	margin-left: 200px;
+}
+input{
+	width: 502px;
+}
+.el-textarea__inner{
+	height: 268px !important;
+}

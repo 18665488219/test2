@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<!-- bootstrap.css插件 -->
+<!-- element.css插件 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link rel="stylesheet" type="text/css" href="./css/login.css">
+</head>
+<body>
+<div id="app">
+<div class="login_box">
+		<h2>猫大人甜点屋后台登录</h2>
+		<el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm" method="post" action="/login/check">
+			<el-form-item label="用户名" prop="username">
+		    <el-input type="text" v-model="ruleForm2.username" auto-complete="off" name="username"></el-input>
+		  </el-form-item>
+		  <el-form-item label="密码" prop="pass">
+		    <el-input type="password" v-model="ruleForm2.pass" auto-complete="off" name="pass"></el-input>
+		  </el-form-item>
+		  <el-form-item label="确认密码" prop="checkPass">
+		    <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off" name="checkPass"></el-input>
+		  </el-form-item>
+		    <el-button type="primary" @click="submitForm('ruleForm2')">登录</el-button>
+		    <el-button @click="resetForm('ruleForm2')">重置</el-button>
+		  </el-form-item>
+		</el-form>
+    <!-- <form class="form-horizontal" method="post" action="/login/check">
+      <div class="form-group">
+        <label for="email" class="col-lg-2 control-label">*用户名</label>
+        <div class="col-lg-6">
+          <input type="text" id="username" class="form-control" name="username" required="required" value="asd">
+        </div>
+        
+      </div>
+
+      <div class="form-group">
+        <label for="Password" class="col-lg-2 control-label">*密码</label>
+        <div class="col-lg-9">
+          <input type="password" id="Password" class="form-control" name="pw1" required="required" value="123">
+        </div>
+      </div>
+      
+    
+    
+
+    
+      <div class="form-group">
+        
+        <div class="col-lg-9 col-lg-offset-2">
+          <input type="submit" class="btn btn-primary btn-md" value="登录">
+        </div> 
+      </div>
+      
+      
+    </form>
+ -->
+</div>
+<div class="bg">
+	<ul>
+		<li><img src="./img/login/0.jpg"></li>
+		<!-- <li><img src="./img/login/1.jpg"></li> -->
+		<!-- <li><img src="./img/login/2.jpg"></li> -->
+	</ul>
+</div>
+</div>
+<!-- vue.js 插件 -->			
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- bootstrap.js 插件 -->
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<!-- element-ui.js 插件 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+	 new Vue({
+      el: '#app',
+      data: function() {
+      var validatePass = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请输入密码'));
+        } else {
+          if (this.ruleForm2.checkPass !== '') {
+            this.$refs.ruleForm2.validateField('checkPass');
+          }
+          callback();
+        }
+      };
+      var validatePass2 = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请再次输入密码'));
+        } else if (value !== this.ruleForm2.pass) {
+          callback(new Error('两次输入密码不一致!'));
+        } else {
+          callback();
+        }
+      };
+      return {
+        ruleForm2: {
+        	username:'',
+          	pass: ''
+        },
+        rules2: {
+        	username: [
+            { validator: validatePass, trigger: 'blur' }
+          	],
+          	pass: [
+            { validator: validatePass, trigger: 'blur' }
+          	],
+          	checkPass: [
+            { validator: validatePass, trigger: 'blur' }
+          	]
+        }
+      };
+    },
+    methods: {
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            alert('登录成功!');
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      },
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
+      }
+    }
+    })
+</script>
+</body>
+</html>

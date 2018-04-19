@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<!-- 适应手机端 -->	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 公共样式 -->
+<link rel="stylesheet" type="text/css" href="./css/public.css">
+<!-- 公司介绍.css -->
+<link rel="stylesheet" type="text/css" href="./css/company.css">
+<!-- element.css插件 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- element.css插件 -->
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<!-- bootstrap.css插件 -->
+<link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+<!-- swiper.css 插件 -->
+
+<!-- 引用百度地图API -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4&ak=您的密钥"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+<!--引用百度地图API-->
+</head>
+<body>
+<div id="app">
+		<el-container>
+		  <el-header>
+		  	<div class="header">
+				<div class="header_left">
+					<div class="icon">
+						<img src="./img/logo_fkfn.png">
+						<div class="icon_right">
+							<p>猫大人甜点屋</p>
+							<p class="font">Lord cat's room for dessert</p>
+						</div>
+					</div>
+				</div>
+				<div class="header_right">
+					<ul class="header_right_ui">
+						<li class="header_right_li"><a href="index.html">网站首页</a></li>
+						<li class="header_right_li"><a href="company.html">公司介绍</a></li>
+						<li class="header_right_li"><a href="sweet.html">甜品展示</a></li>
+						<li class="header_right_li"><a href="new_center.html">新闻中心</a></li>
+						<li class="header_right_li"><a href="msg.html">在线留言</a></li>
+						<li class="header_right_li"><a href="company_iction.html">联系我们</a></li>
+					</ul>
+				</div>
+				</div>
+		  </el-header>
+		  <el-main>
+		  	<!-- banner start -->
+		  	<div class="banner">
+		  		<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+				        	<div class="swiper-slide_img">
+					        	<div class="banner_jx">
+					        		<div class="banner_kat">
+						      			<h4>猫大人甜点屋</h4>
+						      			<h2>马卡龙</h2>
+						      			<p>我在一家很有趣的咖啡馆给你写信，叫不见MISS<br>
+		很是很贴近我现在的心情，不知道你是不是也刚好想起我</p>
+									</div>
+									<div class="pav">
+										<img src="./img/9pav.png">
+									</div>
+					      		</div>
+							</div>
+				        	
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="swiper-slide_img_two">
+					        	<div class="banner_jx">
+					        		<div class="banner_kat">
+						      			<h4>猫大人甜点屋</h4>
+						      			<h2>马卡龙</h2>
+						      			<p>我在一家很有趣的咖啡馆给你写信，叫不见MISS<br>
+		很是很贴近我现在的心情，不知道你是不是也刚好想起我</p>
+									</div>
+									<div class="pav">
+										<img src="./img/9pav.png">
+									</div>
+					      		</div>
+							</div></div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<!-- banner end -->
+			<!-- 公司介绍 start -->
+			<div class="company_contentes">
+				<div class="company_title">
+					<div class="company_title_left">
+						<p>Company<span>联系我们</span>introduction</p>
+					</div>
+					<div class="company_title_right">
+						<span>您现在所在的位置：<a href="#"></a><a href="#"></a></span>
+					</div>
+				</div>
+				<div class="company_dotted"></div>
+				<div class="map">
+					<div class="map_left">
+						<ul class="map_left_ui">
+							<li><div class="map_left_link"><span>食品中心 / Food Center</span></div></li>
+							<li class="map_left_li"><a href="#">新品展示</a></li>
+							<li class="map_left_li"><a href="#">马卡龙</a></li>
+							<li class="map_left_li"><a href="#">西式甜品</a></li>
+							<li class="map_left_li"><a href="#">提拉米苏</a></li>
+							<li class="map_left_li"><a href="#">芝士蛋糕</a></li>
+							<li class="map_left_li"><a href="#">布丁</a></li>
+							<li><span>那一刻的甜美与心动</span>
+								<p>给较爱人的选择</p></li>
+						</ul>
+					</div>
+					<div class="map_right">
+						<!--百度地图容器-->
+					    	<div id="allmap"></div>
+					    	<div class="map_r">
+						    	<ul class="map_r_ui">
+						    		<li class="map_r_li">
+						    			<img src="./img/company_introduction/dteo.png">
+						    			<span>公司地址：中国·上海市某某区某某路123号1-16-16</span>
+						    		</li>
+						    		<li class="map_r_li">
+						    			<img src="./img/company_introduction/kve.png">
+						    			<span>公司传真：+86-21-123456X8</span>
+						    		</li>
+						    		<li class="map_r_li">
+						    			<img src="./img/company_introduction/kdrh.png">
+						    			<span>咨询热线：400-0000-000</span>
+						    		</li>
+						    		<li class="map_r_li">
+						    			<img src="./img/company_introduction/pztf.png">
+						    			<span>企业邮箱：Service@shipin.com</span>
+						    		</li>
+						    		<li class="map_r_li">
+						    			<img src="./img/company_introduction/lzsx.png">
+						    			<span>售后电话：+86-21-123456X8</span>
+						    		</li>
+						    	</ul>
+						    </div>
+						    
+					</div>
+				</div>
+			</div>
+			<!-- 公司介绍 end -->
+			<div></div>
+		</el-main>
+
+		<el-footer>
+		  	<div class="footer_box">
+		  		<!-- 	<div class="nav_box"> -->
+						<nav class="navbar nav-color"><!-- //导航条可根据可视区域的大小调整 -->
+							<div class="navbar-header">
+								<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="glyphicon glyphicon-list"></span>
+								</button>
+							</div>
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav nav-center">
+									<li><a href="index.html" class="active">网站首页</a></li>
+									<li><a href="company.html">公司介绍</a></li>
+									<li><a href="sweet.html">甜品展示</a></li>
+									<li><a href="new_center.html">新闻中心</a></li>
+									<li><a href="msg.html">在线留言</a></li>
+									<li><a href="company_iction.html">联系我们</a></li>
+								</ul>
+							</div>
+						</nav>
+
+		  			<div class="footer_solid"></div>
+		  			<div class="footer_wzi">
+	  					<span>Copyright © 2009-2016 www.yourname.com All rights reserved  版权所有 © 您的网站名称 <p> 沪ICP备XXXXXX号 未经许可 严禁复制 建议使用1366x768分辨率浏览本站</p> </span>
+		  			</div>
+		  			<div class="footer_icon">
+		  				<div class="footer_icon_box">
+		  					<li><span></span></li>
+		  					<li class="footer_img">
+			  					<li><img src="./img/weixin.png"></li>
+			  					<li><img src="./img/weibo.png"></li>
+			  					<li><img src="./img/koukou.png"></li>
+			  				</li>
+		  					<li><span></span></li>
+		  				</div>
+		  			</div>
+		  	</div>
+		  </el-footer>
+</div>
+<!-- 地图 -->
+<script type="text/javascript" src="./js/map.js"></script>
+<!-- vue.js 插件 -->			
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- element-ui.js 插件 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<!-- bootstrap.js 插件 -->
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<!-- swiper.js 插件 -->
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+
+<script>   
+    new Vue({
+      el: '#app',
+      data: function() {
+        return { 
+        	visible: false
+         }
+      }
+    })    
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    loop: true,
+    autoplay:true,
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+
+    },
+  })  
+	var map = new BMap.Map('allmap');
+    var poi = new BMap.Point(116.307852,40.057031);
+    map.centerAndZoom(poi, 16);
+    map.enableScrollWheelZoom();
+
+    var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+                    '<img src="../img/baidu.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+                    '地址：上海浦东新区世纪大道1<br/>地铁2号线到张家嘴' +
+                  '</div>';
+
+    //创建检索信息窗口对象
+    var searchInfoWindow = null;
+	searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+			title  : "百度大厦",      //标题
+			width  : 290,             //宽度
+			height : 80,              //高度
+			panel  : "panel",         //检索结果面板
+			enableAutoPan : true,     //自动平移
+			searchTypes   :[
+				BMAPLIB_TAB_SEARCH,   //周边检索
+				BMAPLIB_TAB_TO_HERE,  //到这里去
+				BMAPLIB_TAB_FROM_HERE //从这里出发
+			]
+		});
+    var marker = new BMap.Marker(poi); //创建marker对象
+    marker.enableDragging(); //marker可拖拽
+    searchInfoWindow.open(marker);
+    // marker.addEventListener("click", function(e){
+	    
+    // })
+    map.addOverlay(marker); //在地图中添加marker
+  </script>
+</body>
+</html>

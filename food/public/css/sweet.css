@@ -1,0 +1,71 @@
+.sweet_right{
+	float: left;
+	width: 914px;
+	margin: auto;
+	margin-left: 30px;
+	/*border:1px solid gray;*/
+}
+.sweet_right_ui{
+	width: 100%;
+}
+.sweet_right_ui .sweet_right_li{
+
+	float: left;
+	box-sizing: border-box;
+}
+.sweet_right_ui .sweet_right_li img{
+	width: 274px;
+	height: 274px;
+	float: left;
+	box-sizing: border-box;
+}
+.sweet_right_ui .sweet_right_li img:hover{
+	border:1px solid #C43A4A;
+}
+.sweet_right_ui .sweet_right_li img{
+	margin-right: 30px;
+	cursor: pointer;
+}
+.sweet_right_ui .sweet_right_li p{
+	text-align: center;
+	font-size: 16px;
+	color: #666666;
+	font-weight: bold;
+	cursor: pointer;
+}
+/*分页*/
+   a {
+        color: #2B4A78;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #2B4A78;
+        text-decoration: underline;
+    }
+
+    a:focus, input:focus {
+        outline-style: none;
+        outline-width: medium;
+    }
+
+    /* custom css style: pageNum,cPageNum */
+    .pageNum {
+        border: 1px solid #999;
+        padding: 2px 8px;
+        display: inline-block;
+    }
+
+    .cPageNum {
+        font-weight: bold;
+        padding: 2px 5px;
+    }
+    #pageNav{
+        -moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+    }
+    #pageNav a:hover {
+        text-decoration: none;
+        background: #fff4d8;
+    }
